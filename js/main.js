@@ -110,6 +110,46 @@
         $(this).find('.collapse.show').collapse('hide');
     });
 
+    $(document).on('click', '.modal-media-btn', function () {
+        var $track = $(this).closest('.modal-media').find('.modal-media-track');
+        var direction = $(this).hasClass('modal-media-prev') ? -1 : 1;
+        var scrollAmount = $track.outerWidth();
+
+        $track.stop().animate({
+            scrollLeft: $track.scrollLeft() + (direction * scrollAmount)
+        }, 250);
+    });
+
+    var updateModalDots = function ($track) {
+        var $dots = $track.closest('.modal-media').find('.modal-media-dot');
+        var slideWidth = $track.outerWidth();
+        var index = slideWidth ? Math.round($track.scrollLeft() / slideWidth) : 0;
+
+        $dots.removeClass('is-active').eq(index).addClass('is-active');
+    };
+
+    $('.modal-media').each(function () {
+        var $media = $(this);
+        var $track = $media.find('.modal-media-track');
+        var $slides = $track.find('.modal-media-slide');
+        var $dots = $media.find('.modal-media-dots');
+
+        $dots.empty();
+        $slides.each(function (idx) {
+            var $dot = $('<button type="button" class="modal-media-dot" aria-label="Go to image ' + (idx + 1) + '"></button>');
+            $dot.on('click', function () {
+                var slideWidth = $track.outerWidth();
+                $track.stop().animate({scrollLeft: idx * slideWidth}, 250);
+            });
+            $dots.append($dot);
+        });
+
+        updateModalDots($track);
+        $track.on('scroll', function () {
+            updateModalDots($track);
+        });
+    });
+
     
 })(jQuery);
 
