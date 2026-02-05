@@ -199,7 +199,7 @@
                                         Software engineering project in collaboration with Brigham & Women’s Hospital. This project had ten-person student teams working in a 
                                         competition to apply Agile development methodologies and software design patterns in Java to prototype a hospital operations application. 
                                         The application focused on map-based navigation and service requests. It was then presented to the hospital dev team for 
-                                        potential features, UI concepts, and design directions for future development.
+                                        potential features, UI concepts, and design directions for future development.<br>
                                     </p>
                                     <h5>Features:</h5>
                                     <p>
@@ -218,7 +218,7 @@
                     </div>
 
                     <!-- Portfolio Item 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
                                 <a data-toggle="modal" data-target="#portfolioModal2">
@@ -236,7 +236,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="portfolioModalLabel2">Product Landing Page</h5>
+                                    <h5 class="modal-title" id="portfolioModalLabel2">Dots and Boxes AI Player</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -252,15 +252,27 @@
                                         <button class="modal-media-btn modal-media-next" type="button" aria-label="Scroll images right">&gt;</button>
                                         <div class="modal-media-dots" role="tablist" aria-label="Carousel navigation"></div>
                                     </div>
-                                    <p>I need a description</p>
-                                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+                                    <p>
+                                        Developed an AI player for the game "Dots and Boxes" using the Minimax algorithm with alpha-beta pruning and iterative deepening. 
+                                        The system evaluates board states through a heuristic-driven clustering method that prioritizes box completion and 
+                                        strategic placement of the edges. Competed against 30 teams in a class-wide tournament and placed in the top 3.<br>
+                                    </p>
+                                    <h5>Features:</h5>
+                                    <p>
+                                        <ul>
+                                            <li>Evaluation function that clusters adjacent boxes and scores based on edge completion priority (0-3 edges).</li>
+                                            <li>Reader/writer communication protocol to handle referee interactions and game state synchronization.</li>
+                                            <li>Complete board state management with illegal move detection and mental model tracking of claimed edges.</li>
+                                        </ul>
+                                    </p>
+                                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/aidansyrgak/DotsAndBoxes_MiniMax" target="_blank" rel="noopener">GitHub</a>
                                 </div>
                             </div>
                         </div>
                     </div> 
 
                     <!-- Portfolio Item 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
                                 <a data-toggle="modal" data-target="#portfolioModal3">
@@ -278,7 +290,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="portfolioModalLabel3">Javascript Quiz</h5>
+                                    <h5 class="modal-title" id="portfolioModalLabel3">LaTeX Visualizer</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -294,7 +306,20 @@
                                         <button class="modal-media-btn modal-media-next" type="button" aria-label="Scroll images right">&gt;</button>
                                         <div class="modal-media-dots" role="tablist" aria-label="Carousel navigation"></div>
                                     </div>
-                                    <p>Details about the product landing page project, including technology stack, purpose, and unique challenges or accomplishments.</p>
+                                    <p>A web app for converting mathematical expressions between raw LaTeX code and high-quality rendered images. Using Gemini 
+                                        API, the app can read handwritten or typed math from various sources, including 
+                                        images, freehand drawings, and Excel-style syntax, and translate them instantly into precise LaTeX. It can also
+                                        render LaTeX code into nicely styled math images suitable for papers or presentations, eliminating the need to learn LaTeX syntax or
+                                        use plug-ins.<br></p>
+                                        <h5>Features:</h5>
+                                    <p>
+                                        <ul>
+                                            <li>Input equations through freehand drawing, image uploads, Excel-style syntax, or raw LaTeX code.</li>
+                                            <li>Gemini-powered vision and language processing to accurately interpret handwritten and typed math.</li>
+                                            <li>Generate high-resolution styled images from LaTeX strings for use in presentations or documents.</li>
+                                            <li>Framework: Django</li>
+                                        </ul>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -342,7 +367,7 @@
                                         This tool explores how CPU cache parameters can be inferred using only memory access behavior, without inspecting internal cache state. 
                                         I built a DineroIV-style cache simulator and a trace-driven analyzer that generates targeted memory reference streams and interprets aggregate 
                                         hit/miss results to deduce cache info (block size, capacity, associativity, replacement policy). The analyzer uses black-box testing to infer 
-                                        cache behavior from simulator output, mirroring real-world trace-based cache analysis.<br><br>
+                                        cache behavior from simulator output, mirroring real-world trace-based cache analysis.<br>
                                     </p>
                                     <h5>Features:</h5>
                                     <p>
@@ -350,7 +375,6 @@
                                             <li>Configurable simulator that models CPU cache behavior across multiple architectures.</li>
                                             <li>Supports direct-mapped, 2-way set associative, 4-way set associative, and column-associative configurations.</li>
                                             <li>Column-assoicative cache implemented as described by Agarwal and Pudar in <a href="https://ieeexplore.ieee.org/document/698559" target="_blank">this paper</a>.</li>
-                                            <li>Cache block size identification through spatial locality patterns.</li>
                                             <li>Cache associativity inference using controlled set conflicts.</li>
                                             <li>Replacement policy differentiation through ordered access patterns.</li>
                                         </ul>
@@ -380,7 +404,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="portfolioModalLabel5">Galactic Runner VR</h5>
+                                    <h5 class="modal-title" id="portfolioModalLabel5">Designing, Simulating, and Evaluating Indirect Branch Predictors</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -390,25 +414,32 @@
                                         <button class="modal-media-btn modal-media-prev" type="button" aria-label="Scroll images left">&lt;</button>
                                         <div class="modal-media-track">
                                             <div class="modal-media-slide">
-                                                <img src="img/portfolio-5.jpg" alt="Placeholder image 1" class="img-fluid">
+                                                <img src="img/ITTAGE_predictor.png" alt="ITTAGE Predictor Architecture" class="img-fluid">
                                             </div>
                                             <div class="modal-media-slide">
-                                                <img src="img/portfolio-6.jpg" alt="Placeholder image 2" class="img-fluid">
-                                            </div>
-                                            <div class="modal-media-slide">
-                                                <img src="img/hero.png" alt="Placeholder image 3" class="img-fluid">
+                                                <img src="img/predictor_results.png" alt="Predictor Results" class="img-fluid">
                                             </div>
                                         </div>
                                         <button class="modal-media-btn modal-media-next" type="button" aria-label="Scroll images right">&gt;</button>
                                         <div class="modal-media-dots" role="tablist" aria-label="Carousel navigation"></div>
                                     </div>
-                                    <p>Fast-paced virtual reality endless runner created for Oculus Quest that highlights procedural track generation, haptic feedback cues, and gesture-based controls.</p>
-                                    <p><strong>Highlights:</strong></p>
-                                    <ul class="mb-0">
-                                        <li>Unity 2022 LTS and C# gameplay systems tuned for 90 FPS locomotion.</li>
-                                        <li>Procedural content pipeline with ScriptableObjects to balance hazards and rewards.</li>
-                                        <li>Integrated FMOD soundtrack reactive to player streaks and obstacle clearance.</li>
-                                    </ul>
+                                    <p>
+                                        Developed Python-based simulators for multiple indirect branch predictor architectures and evaluated their performance across 
+                                        different workloads. Using a custom Intel Pin tracing tool, captured indirect branch behavior from PyPerformance benchmarks, generating 
+                                        traces of ~22 million branches per workload. Implemented seven predictor designs, ranging from a simple Branch Target Buffer to state-of-the-art Indirect Target 
+                                        TAgged GEometric length predictor (ITTAGE), coming up with an experimental hybrid predictor that achieved the lowest misprediction ratio.<br>
+                                    </p>
+                                    <h5>Features:</h5>
+                                    <p>
+                                        <ul>
+                                            <li>Seven predictor architectures including BTB, <a href="https://doi.org/10.1145/279361.279380" target="_blank">two-level</a>, 
+                                                <a href="https://dl.acm.org/doi/10.5555/290940.290993" target="_blank">cascaded</a>, and 
+                                                <a href="https://www.researchgate.net/publication/248499094_A_case_for_partially_TAgged_GEometric_history_length_branch_prediction" target="_blank">ITTAGE</a> 
+                                                with 2-bit counter variations, implemented as described in the linked papers.</li>
+                                            <li>Hybrid predictor combining ITTAGE's global history with local history tables for improved accuracy.</li>
+                                            <li>Performance evaluation across eight PyPerformance benchmarks with misprediction ratio analysis.</li>
+                                        </ul>
+                                    </p>
                                 </div>
                             </div>
                         </div>

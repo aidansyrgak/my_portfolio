@@ -21,11 +21,15 @@ a {
     transition: .3s;
 }
 
+.modal-body a { 
+    text-decoration: underline;
+}
+
 a:hover,
 a:active,
 a:focus {
     outline: none;
-    text-decoration: underline;
+    color: #1d8bdf
 }
 
 a.btn,
