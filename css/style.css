@@ -1025,7 +1025,7 @@ a.btn:active {
     display: flex;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
     text-align: center;
     justify-content: center;
 }
@@ -1038,7 +1038,7 @@ a.btn:active {
 
 .portfolio .portfolio-text h3 {
     width: calc(100% - 70px);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     margin: 0 0 0 0;
     white-space: nowrap;
