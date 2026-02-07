@@ -1005,6 +1005,7 @@ a.btn:active {
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 4 / 3;
     outline: solid 1px rgb(190, 190, 190)
 }
 
@@ -1020,6 +1021,7 @@ a.btn:active {
 .portfolio .portfolio-item:hover img {
     margin-left: 15px;
 }
+
 
 .portfolio .portfolio-text {
     position: relative;
