@@ -12,9 +12,7 @@
     loader();
     
     
-    // Initiate the wowjs
-    var wow = new WOW({ live: false });
-    wow.init();
+    // WOW disabled to prevent scroll jitter
     
     
     // Back to top button

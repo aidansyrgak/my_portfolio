@@ -7,6 +7,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.wow,
+.animated {
+    visibility: visible !important;
+    animation: none !important;
+}
+
 h1,
 h2, 
 h3, 
