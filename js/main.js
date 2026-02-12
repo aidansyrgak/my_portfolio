@@ -13,7 +13,8 @@
     
     
     // Initiate the wowjs
-    new WOW().init();
+    var wow = new WOW({ live: false });
+    wow.init();
     
     
     // Back to top button
@@ -32,7 +33,7 @@
     
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
+        if ($(this).scrollTop() > 50) {
             $('.navbar').addClass('nav-sticky');
         } else {
             $('.navbar').removeClass('nav-sticky');
@@ -93,15 +94,57 @@
     
     
     // Portfolio filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
+    var $portfolioContainer = $('.portfolio-container');
+    var portfolioIsotope = $portfolioContainer.isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
     });
+
+    var layoutPortfolio = function () {
+        if (portfolioIsotope) {
+            portfolioIsotope.isotope('layout');
+        }
+    };
+
+    var bindPortfolioImages = function () {
+        var $images = $portfolioContainer.find('img');
+        if ($images.length === 0) {
+            layoutPortfolio();
+            return;
+        }
+
+        var remaining = $images.length;
+        $images.each(function () {
+            if (this.complete) {
+                remaining -= 1;
+                if (remaining === 0) {
+                    layoutPortfolio();
+                }
+                return;
+            }
+
+            $(this).one('load error', function () {
+                remaining -= 1;
+                if (remaining === 0) {
+                    layoutPortfolio();
+                }
+            });
+        });
+    };
+
+    var ensurePortfolioVisible = function () {
+        $portfolioContainer.find('.portfolio-item').css('visibility', 'visible');
+    };
+
+    bindPortfolioImages();
+    ensurePortfolioVisible();
 
     $('#portfolio-filter li').on('click', function () {
         $("#portfolio-filter li").removeClass('filter-active');
         $(this).addClass('filter-active');
         portfolioIsotope.isotope({filter: $(this).data('filter')});
+        ensurePortfolioVisible();
+        setTimeout(layoutPortfolio, 0);
     });
 
 
